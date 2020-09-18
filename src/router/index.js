@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import AddressList from '../views/AddressList.vue'
+import AddressNew from "../views/AddressNew";
+import AddressEdit from "../views/AddressEdit";
 Vue.use(VueRouter)
 
 const routes = [
@@ -22,6 +24,16 @@ const routes = [
     path: '/addressList',
     name: "地址列表",
     component: AddressList
+  },
+  {
+    path: "/addressNew",
+    name: "新增地址",
+    component: AddressNew
+  },
+  {
+    path: "/addressEdit",
+    name: "修改地址",
+    component: AddressEdit
   }
 ]
 
