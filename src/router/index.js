@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import AddressList from '../views/AddressList.vue'
 import AddressNew from "../views/AddressNew";
 import AddressEdit from "../views/AddressEdit";
+import Detail from "../views/Detail";
+import Success from "../views/Success";
 Vue.use(VueRouter)
 
 const routes = [
@@ -34,6 +36,16 @@ const routes = [
     path: "/addressEdit",
     name: "修改地址",
     component: AddressEdit
+  },
+  {
+    path: "/detail",
+    name: "订单详情",
+    component: Detail
+  },
+  {
+    path: "/success",
+    name: "支付成功",
+    component: Success
   }
 ]
 

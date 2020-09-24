@@ -17,22 +17,7 @@
         data() {
             return {
                 chosenAddressId: 0,
-                list: [
-                    {
-                        areaCode: "440303",
-                        id: 21,
-                        name: "冯斌",
-                        tel: "15357481218",
-                        address: "安徽省六安市舒城县鼓楼新城"
-                    },
-                    {
-                        areaCode: "045512",
-                        id: 22,
-                        name: "冯斌",
-                        tel: "15357481218",
-                        address: "湖南省湘潭市湘潭大学"
-                    }
-                ]
+                list: ''
             }
         },
         created(){
@@ -46,9 +31,7 @@
                 this.$router.push('/addressNew')
             },
             onEdit(item) {
-                //将对象封装成String格式传递给address
                 let data = JSON.stringify(item)
-                //不能？传参，将item绑定到data传递给addressEdit
                 this.$router.push({path:'/addressEdit',query:{item:data}})
             },
             onselect(item){

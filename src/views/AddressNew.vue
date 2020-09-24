@@ -19,7 +19,6 @@
         },
         methods: {
             onSave(item) {
-                //item封装了存储信息，即后台接收的信息
                 const _this = this
                 axios.post('http://localhost:8181/address/create',item).then(function (resp) {
                     if(resp.data.code == 0){
@@ -30,6 +29,7 @@
                         }, 1000)
                     }
                 })
+
             },
             onDelete() {
                 history.go(-1)
@@ -39,4 +39,5 @@
 </script>
 
 <style scoped>
+
 </style>

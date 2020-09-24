@@ -15,10 +15,7 @@
     export default {
         name: "AddressEdit",
         created(){
-
-            //将list的参数data解析json
             let data = JSON.parse(this.$route.query.item)
-            //  console.log(data)
             this.addressInfo = data
             let index = data.address.indexOf('区')
             if(index < 0) index = data.address.indexOf('县')
@@ -42,6 +39,7 @@
                         }, 1000)
                     }
                 })
+
             },
             onDelete() {
                 history.go(-1)
@@ -51,4 +49,5 @@
 </script>
 
 <style scoped>
+
 </style>
